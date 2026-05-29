@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>中国传统文化</title>
+<link href="css/style07.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="head">
+    <div class="con">
+        <ul class="left">
+            <li><a href="project07.html">首页</a></li>
+            <li><a href="music.html">传统音乐</a></li>
+            <li><a href="column.html">独家栏目</a></li>
+            <li><a href="heritage.html">非遗专区</a></li>
+            <li><a href="encyclopedia.html">文化百科</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="register.html">注册</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 2. Banner轮播 -->
+<div class="banner">
+    <div class="banner_pic">
+        <img src="images/111.png" class="active" alt="中国传统文化">
+        <img src="images/222.png" alt="非遗文化">
+        <img src="images/333.png" alt="传统艺术">
+    </div>
+    <div class="banner_text">
+        <h1>中国传统文化</h1>
+        <p>传承千年文脉 · 守护非遗瑰宝</p>
+    </div>
+</div>
+
+<!-- 3. 内容模块 -->
+<div id="content">
+    <!-- 最热视频区 -->
+<div class="hot">
+    <h2>最热视频</h2>
+    <div class="video-container">
+        <video src="images/13.mp4" controls></video>
+        <div class="image-grid">
+            <a href="#"><img src="images/12.png" alt="传统戏曲"></a>
+            <a href="#"><img src="images/13.png" alt="传统剪纸"></a>
+        </div>
+    </div>
+</div>
+
+    <!-- 文化达人大使区 -->
+    <div class="share">
+        <h2>文化达人</h2>
+        <a href="blog-calligraphy.html">
+            <img src="images/9.png" alt="书法老师">
+            <div class="cur">
+                <h3>书画大家·王老师</h3>
+                <p>深耕书法教育30年 | 粉丝4.1万</p>
+                <span>关注TA</span>
+            </div>
+        </a>
+        <a href="blog-tea.html">
+            <img src="images/11.jpg" alt="茶艺师">
+            <div class="cur">
+                <h3>茶艺大师·陈老师</h3>
+                <p>传承中华茶道文化 | 粉丝2.7万</p>
+                <span>关注TA</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- 4. 页脚 -->
+<div id="footer">
+    <p>Copyright © 2020-2030 TCC All Rights Reserved.</p>
+    <p>ICP备案号：粤ICP备22222222号-1 | 联系电话：400-888-9999</p>
+</div>
+
+<!-- 轮播JS + 页眉悬停显示逻辑 -->
+<script>
+// 轮播功能
+let imgs = document.querySelectorAll('.banner_pic img');
+let index = 0;
+
+function slide() {
+    imgs.forEach(img => img.classList.remove('active'));
+    index = (index + 1) % imgs.length;
+    imgs[index].classList.add('active');
+}
+setInterval(slide, 5000);
+</script>
+
+</body>
+</html>

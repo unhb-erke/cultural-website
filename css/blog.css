@@ -1,0 +1,79 @@
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    font-family: "微软雅黑", "宋体", sans-serif;
+    color: #333;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 返回按钮 */
+.back-btn {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #8B4513;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.back-btn:hover {
+    background: #703810;
+}
+
+/* 标题区 */
+.blog-header h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.blog-meta {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* 正文 */
+.blog-content p {
+    margin-bottom: 20px;
+    text-indent: 2em;
+    font-size: 16px;
+}
+
+/* 评论区 */
+.comment-section {
+    margin-top: 50px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+.comment-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.comment-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.comment-header {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+.comment-author {
+    color: #c8102e;
+    font-weight: bold;
+}
+.comment-text {
+    font-size: 15px;
+}

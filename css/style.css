@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background: #f5f1e9;
+    font-family: "微软雅黑", "宋体", Arial, sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+#head {
+    width: 100%;
+    height: 60px;
+    background: #8B4513; /* 故宫深棕色 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-radius: 0 0 8px 8px; /* 只让底部圆角，顶部保持直角 */
+}
+
+#head .con {
+	width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#head .con .left,
+#head .con .right {
+	display: flex;
+	gap: 50px;
+}
+#head .con li {
+	height: 60px;
+	line-height: 60px;
+	font-size: 16px;
+	color: #fff;
+}
+#head .con li a:hover {
+	color: #ffd700; /* 故宫金色hover */
+}
+
+/* ========== 2. 通用Banner ========== */
+.banner {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* 添加圆角 */
+    margin-top: 10px; /* 可选：与页眉留点间距 */
+}
+
+.banner_pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.banner_pic img.active {
+    opacity: 1;
+}
+.banner .banner_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    z-index: 10;
+    font-family: "楷体", "宋体";
+}
+.banner .banner_text h1 {
+    font-size: 56px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    letter-spacing: 8px;
+}
+.banner .banner_text p {
+    font-size: 24px;
+    letter-spacing: 4px;
+    font-weight: 300;
+}
+
+/* ========== 3. 通用内容模块 ========== */
+#content {
+	width: 1200px;
+	margin: 60px auto;
+}
+.page-title {
+	text-align: center;
+	font-size: 36px;
+	color: #333;
+	margin-bottom: 50px;
+	letter-spacing: 2px;
+	font-family: "宋体";
+	position: relative;
+}
+.page-title::after {
+	content: '';
+	width: 60px;
+	height: 3px;
+	background: #c8102e;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* 通用卡片网格布局 */
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 25px;
+	margin-bottom: 60px;
+}
+.card {
+	background: #fff;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+	transition: transform 0.3s ease;
+}
+.card:hover {
+	transform: translateY(-5px);
+}
+.card img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	display: block;
+}
+.card .card-info {
+	padding: 15px;
+}
+.card .card-info h3 {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	color: #c8102e;
+	line-height: 1.4;
+}
+.card .card-info p {
+	font-size: 14px;
+	color: #666;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.card .card-info .tag {
+	display: inline-block;
+	padding: 4px 12px;
+	background: #c8102e;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 4px;
+}
+
+/* ========== 4. 页脚 ========== */
+#footer {
+    width: 1200px;
+    margin: 60px auto 0;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+#footer p {
+    margin: 8px 0;
+}
